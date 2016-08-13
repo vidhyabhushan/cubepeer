@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+	min-height:100%;
+	min-width:100%;
+	overflow-x: hidden;
+}
+
+ul {
+	list-style: none;
+}
+/*Fix temporary*/
+#home {
+	padding-top:50px;
+	height:500px;
+	color: #fff;
+	background-color: #80DEEA;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:100%;
+	background: url("../im/desktop.jpeg") no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#products {
+	padding-top:50px;
+	height:500px;
+	color: #fff;
+	background-color: #80DEEA;
+	width:100%;
+}
+
+#services {
+	padding-top:50px;
+	height:500px;
+	color: #fff;
+	background-color: #80DEEA;
+	background: url("../im/services.jpg") center center; 
+	-webkit-background-size: cover;
+	width:100%;
+}
+
+#about {
+	padding-top:50px;
+	height:500px;
+	color: #fff;
+	background-color: #80DEEA;
+}
+
+#contacts {
+	padding-top:50px;
+	height:600px;
+	color: #fff;
+}
+
+#contact { 
+  position: relative; 
+  z-index: 1; /* The z-index should be higher than Google Maps */
+  width: 300px;
+  margin: 60px auto 0;
+  padding: 10px;
+  background: black;
+  height: auto;
+  opacity: .45; /* Set the opacity for a slightly transparent Google Form */ 
+  color: white;
+}
+
+#careers {
+	padding-top:50px;
+	height:500px;
+	color: #fff;
+	background-color: #80DEEA;
+	background: url("../im/workwithus.jpg") no-repeat center center;
+	-webkit-background-size: cover;
+}
+
+.banner-center {
+	text-align: center;
+	padding-top:30px;
+	
+}
+
+.main-content {
+		min-height:200px;
+}
+
+.menu-uses{
+	text-align:center;
+}
+
+.list-heading {
+    font-weight: normal;
+	align:center;
+}
+
+hr {
+color:#18FFFF;
+} 
+
+a:hover {
+	color:#00B8D4;
+	text-decoration: none;
+}
+
+.media-img:hover {
+	opacity: 0.5;
+}
+
+#details-col {
+	bottom:0;
+	position:absolute;
+	border: solid;
+	display: inline-block;
+	text-align:center;
+	margin:20px 20px 20px 20px;
+	background:rgba(0,0,0,0.7);;
+}
+
+.nav .navbar-nav > .active > a,
+.nav .navbar-nav > .active > a:hover,
+.nav .navbar-nav > .active > a:active, {
+   color:#00B8D4;
+}
+ 
+.form-contact-body {
+	background:#00E5FF;
+	border:2px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.map-contact {
+	margin-top:20px;
+	border:2px;
+	margin-bottom:20px;
+}
+
+#map-link {
+	border: 1px solid #ffffff;
+	margin:auto;
+	text-align:center;
+}
+
+
+#input-div input {
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    outline: none;
+}
+
+.sepearter {
+	background: #fff;
+	position: relative;
+}
+
+.sottofooter {
+	font-size: 12px;
+	background:#101010;
+}
+
+.footer-style {
+  bottom:0;
+  width:100%;
+  
+}
+
+.logo-small {
+    color: #00E5FF;
+    font-size: 50px;
+}
