@@ -1,43 +1,36 @@
-var info = new Object();
-// {firstName, companyName, mobileNumber, emailAddress, message};
- 
- $(document).ready(function(){
-    $("button").click(function(){
-        info.firstName = $("#firstName").val;
-		console.log(info.firstName);
-    
-	
-	var saveData = function (info){
-		console.log(info.firstName);
-	}
-	});
+jQuery(document).ready(function($){
+//$('#form-container').submit(saveData);
 });
 
 
-var recaptchaCallback = function() {
-	var forms = document.getElementsByTagName('form');
-	var pattern = /(^|\s)g-recaptcha(\s|$)/;
 
-	for (var i = 0; i < forms.length; i++) {
-		var divs = forms[i].getElementsByTagName('div');
+function saveData() {
+    
+    function loadData() {
+        
 
-		for (var j = 0; j < divs.length; j++) {
-			var sitekey = divs[j].getAttribute('data-sitekey');
+        var $requestInfo = $('#requestInfo');
+ 
+        // load request information data
+        var info = new Object();
+        info.firstName = $('#firstName').val();
+        info.companyName = $('#companyName').val();
+        info.mobileNumber = $('#mobileNumber').val();
+        info.emailAddress = $('#emailAddress').val();
+        info.request = $('#request').val();
 
-			if (divs[j].className && divs[j].className.match(pattern) && sitekey) {
-				grecaptcha.render(divs[j], {
-					'sitekey': sitekey,
-					'theme': divs[j].getAttribute('data-theme'),
-					'type': divs[j].getAttribute('data-type'),
-					'size': divs[j].getAttribute('data-size'),
-					'tabindex': divs[j].getAttribute('data-tabindex'),
-					'callback': divs[j].getAttribute('data-callback'),
-					'expired-callback': divs[j].getAttribute('data-expired-callback')
-				});
-
-				break;
-			}
-		}
-	}
+        
+        // YOUR CODE GOES HERE!
+        console.log(info.firstName +" "+ info.companyName+" "+"Contact Vidverma ");
+        info.resetInfo = function() {
+            $('#form-container').reset();
+        };
+        //info.resetInfo();
+        grecaptcha.reset();
+        return false;
+    }
+    
+    loadData();
+    return false;
 }
 

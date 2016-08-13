@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="./js/info.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=vidhya_enter_key_to_unlock"></script> 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMAA4UlMnv0owu3KlBvD_viFCADmJDW3Y"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body data-spy="affix" data-target=".navbar" data-offset="50">
@@ -66,7 +67,8 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <!-- Add when we have one -- >
+          <!-- <li><a href="products.html">Products</a></li> -->
           <li><a href="services.html">Services</a></li>
 		  <li><a href="careers.html">Careers</a></li>
 		  <li><a href="about.html">About</a></li>
@@ -77,36 +79,31 @@
   </div>
 </nav>
 
-<div id="main-container">
+<div id="main-container well well-lg">
 <div id="map_canvas"  style="width:100%;"></div>
 <div class="mappa-overlay">
 	<div class="container">
 	<div class="row" id="contact-form">
 	<div class="map-contact">
-	<div class="row">
+	<div class="row" id="map-content">
 	<div id="map-link" class="text-center">
 	<h5>OFFICE<sup>CubePeer<M/sup></h5>
 	<p>Supela, Bhilai <br>Chattisgarh</p>
-	<p><a href="https://www.google.co.in/search?biw=1680&bih=925&q=shriram%20enterprises%20bhilai&sa=X&ved=0ahUKEwiJkdHs2obOAhVDp5QKHTgFA3MQvS4IIzAA&dpr=1&ion=1&cad=cbv&bvch=u&sei=3eCRV-OiOcGk0gTL_4-wDw&rct=j&tbs=lf:1,lf_ui:2&npsic=0&rflfq=1&rlha=0&rllag=21232657,81459278,11834&tbm=lcl&rldimm=3177531911460586750" style="border:solid white 1em;" target="_blank">Google Map</a></p>
+	<p><span class="glyphicon glyphicon-map-marker"><a href="https://www.google.co.in/search?biw=1680&bih=925&q=shriram%20enterprises%20bhilai&sa=X&ved=0ahUKEwiJkdHs2obOAhVDp5QKHTgFA3MQvS4IIzAA&dpr=1&ion=1&cad=cbv&bvch=u&sei=3eCRV-OiOcGk0gTL_4-wDw&rct=j&tbs=lf:1,lf_ui:2&npsic=0&rflfq=1&rlha=0&rllag=21232657,81459278,11834&tbm=lcl&rldimm=3177531911460586750" style="border:1em;" target="_blank">Google Map</a></p>
 	</div>
 	</div>
 	</div>
 	</br></br>
-	<div class="form-contact-body text-center">
+	<div class="form-contact-body text-center" id="requestInfo">
 	<h4>Request Information</h4>
-	<form method="post" action="verify.php">
-	<?php
-    require_once('recaptchalib.php');
-    $publickey = "6LcrvSUTAAAAAJKflMEIeVDfqKeGmiq-nQ3B60Vr";
-    echo recaptcha_get_html($publickey);
-    ?>
+	<form method="post" action="" id="form-container">
 	<input type="text" class="form-control" id="firstName" placeholder="Please enter your name"><br>
 	<input type="text" class="form-control" id="companyName" placeholder="Please enter your company name"><br>
 	<input type="text" class="form-control" id="mobileNumber" placeholder="Contact Number"><br>
 	<input type="text" class="form-control" id="emailAddress" placeholder="Email"><br>
-	<input type="text" class="form-control" id="message" name="message" style="height:150px;" placeholder="Brief description of your requuirment"><br>
-	<div class="g-recaptcha" data-sitekey="vidhya_enter_key_to_unlock"></div><br>
-	<input class="btn btn-default" onclick="saveData();" style="height:48px; width:100%;" type="button" value="Send Request"><br>
+	<input type="text" class="form-control" id="request" name="request" style="height:150px;" placeholder="Brief description of your requuirment"><br><br>
+	<div class="g-recaptcha" data-sitekey="6Lc1OyYTAAAAACz3YOOGnSonOCazqWkiGFbNAMv8" style="transform:scale(0.84); float:left;transform-origin:0 0;-webkit-transform-origin:0 0;";></div><br><br>
+	<input class="btn btn-default" style="height:48px; width:100%;" onclick="saveData();" type="submit" value="Send Request"><br>
 	<br>
 	</form>
 	</div>
@@ -118,58 +115,59 @@
         </div>
 	</div>
 	<div class="row text-center">
-		<div class="col-sm-4">
+		<div class="col-sm-4" style="text-align:center;">
 		<h4 class="text-uppercase">General</h4>
 		<p>Submit a general inquiry</br>
-		<a href="mailto:inquiry.cubepeer@gmail.com">inquiry.cubepeer@gmail.com</a>
+		<a href="mailto:inquiry.cubepeer@gmail.com"><span class="glyphicon glyphicon-envelope"></span> inquiry.cubepeer@gmail.com</a>
 		</p>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-4" style="text-align:center;">
 			<h4 class="text-uppercase">Media</h4>
 			<p>Contact our media team</br>
-			<a href="mailto:media.cubepeer@gmail.com">media.cubepeer@gmail.com</a>
+			<a href="mailto:media.cubepeer@gmail.com"><span class="glyphicon glyphicon-envelope"></span> media.cubepeer@gmail.com</a>
 			</p>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-4" style="text-align:center;">
 			<h4 class="text-uppercase">Product support</h4>
 			<p>Contact our technical support</br>
-			<a href="mailto:support.cubepeer@gmail.com">support.cubepeer@gmail.com</a>
+			<a href="mailto:support.cubepeer@gmail.com"><span class="glyphicon glyphicon-envelope"></span> support.cubepeer@gmail.com</a>
 			</p>
 		</div>
 	</div>
 	<div class="row text-center">
-	<h4 class="text-uppercase">phone number</h4>
-	<span>+91-9999988888</span>
-	</div><hr/>
+	<p><span class="glyphicon glyphicon-phone">+91-9999988888</p>
+	</div>
 	</div>
 </div>
 </div>
 
 <!-- Footer -->
-<footer class="content-info" role="contentinfo">
-<div class="container footer-style">
+<footer class="content-fluid well footer-style" role="contentinfo">
+<div class="container">
 	<div class="row">
-		<div class="col-sm-5">
+		<div class="col-sm-4" style="text-align:center;">
 		<h5>CubePeer Technologies <small>Software Products & Solutions Company</small></h5>
 		<div id="fb-root"></div>
 		</div>
-		<div class="col-sm-5">
+		<div class="col-sm-4 style="text-align:center;">
 		<h5>Put new data</h5><a href=""></a>
 		<!-- FIXME:VID: phone number -->
 		<p>Get something new<br/></p>
 		</div>
-		<div class="col-sm-2">
+		<div class="col-sm-4" style="text-align:center;">
 		<a href="./careers.html">Careers
 		<h5>Why it is right time to join us?</h5></a>
 		</div>
 	</div>
 	<hr/>
 	<div class="sotto-footer">
-		<div class="col-sm-4">
+		<div class="col-sm-6">
 			<a href="http://www.facebook.com" target="_blank"><img src="./im/full/facebook.png" style="width:30px; height:30px;" alt="Facebook" class="img-circle"></a>
 			<a href="http://plus.google.com" target="_blank"><img src="./im/full/google.png" alt="Google+" style="width:30px; height:30px;" class="img-circle"></a>
 		</div>
+		<div class="col-sm-4">
 		<p class="copyright" >Privacy Policy -  &copy; 2016 CubePeer Technologies</p>
+		</div>
 	</div>
 </div>
 </footer>
