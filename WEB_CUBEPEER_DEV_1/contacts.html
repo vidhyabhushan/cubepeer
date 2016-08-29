@@ -1,6 +1,6 @@
 
 <div id="main-container well well-lg">
-<div id="map_canvas"  style="width:100%;"></div>
+<div id="map_canvas" ng-controller="MapController"></div>
 <div class="mappa-overlay">
 	<div class="container">
 	<div class="row" id="contact-form">
@@ -15,14 +15,14 @@
 	</div><br><br>
 	<div class="form-contact-body text-center" id="requestInfo">
 	<h4>Request Information</h4>
-	<form method="post" action="" id="form-container">
-	<input type="text" class="form-control" id="firstName" placeholder="Please enter your name"><br>
-	<input type="text" class="form-control" id="companyName" placeholder="Please enter your company name"><br>
-	<input type="text" class="form-control" id="mobileNumber" placeholder="Contact Number"><br>
-	<input type="text" class="form-control" id="emailAddress" placeholder="Email"><br>
-	<input type="text" class="form-control" id="request" name="request" style="height:150px;" placeholder="Brief description of your requuirment"><br><br>
-	<div class="g-recaptcha" data-sitekey="6Lc1OyYTAAAAACz3YOOGnSonOCazqWkiGFbNAMv8" style="transform:scale(0.84); float:left;transform-origin:0 0;-webkit-transform-origin:0 0;";></div><br><br>
-	<input class="btn btn-default" style="height:48px; width:100%;" onclick="saveData();" type="submit" value="Send Request"><br>
+	<form name="requestForm" method="post" action="" id="form-container" ng-controller="FormController" ng-submit="requestForm.$valid && saveData(user)" novalidate>
+	<input type="text" class="form-control" ng-model="user.firstName" placeholder="Please enter your name" required><br>
+	<input type="text" class="form-control" ng-model="user.companyName" placeholder="Please enter your company name"><br>
+	<input type="text" class="form-control" ng-model="user.mobileNumber" placeholder="Contact Number"><br>
+	<input type="email" class="form-control" ng-model="user.emailAddress" placeholder="Email" required><br>
+	<input type="text" class="form-control" ng-model="user.request" name="request" style="height:150px;" placeholder="Brief description of your requuirment" required><br><br>
+	<div class="g-recaptcha" data-sitekey="6Lc1OyYTAAAAACz3YOOGnSonOCazqWkiGFbNAMv8" style="transform:scale(0.84); float:left;transform-origin:0 0;-webkit-transform-origin:0 0;"></div><br><br>
+	<input class="btn btn-default" style="height:48px; width:100%;" type="submit" value="Send Request"/><br>
 	<br>
 	</form>
 	</div>
