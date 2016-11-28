@@ -33,7 +33,7 @@ cpApp.config(function($routeProvider) {
 //https://jsfiddle.net/Xeoncross/k5c2ndyL/
 cpApp.controller('MapController',function(){
 
-  google.maps.event.addDomListener(window, 'click', initMap);
+  google.maps.event.addDomListener(window, 'load', initMap);
   function initMap() {
     var cubepeer = {lat: 16.503249, lng: 77.937012};
     var map = new google.maps.Map(document.getElementById('map_canvas'), {
