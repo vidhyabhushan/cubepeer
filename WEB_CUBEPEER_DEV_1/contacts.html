@@ -1,58 +1,27 @@
 
 <div id="main-container well well-lg">
-<div id="map_canvas" ng-controller="MapController"></div>
-<div class="mappa-overlay">
-	<div class="container">
-	<div class="row" id="contact-form">
-	<div class="map-contact">
-	<div class="row" id="map-content">
-	<div id="map-link" class="text-center">
-	<h5>OFFICE<sup>CubePeer</sup></h5>
-	<p>Supela, Bhilai <br>Chattisgarh</p>
-	<p><span class="glyphicon glyphicon-map-marker"><a href="https://www.google.co.in/search?biw=1680&bih=925&q=shriram%20enterprises%20bhilai&sa=X&ved=0ahUKEwiJkdHs2obOAhVDp5QKHTgFA3MQvS4IIzAA&dpr=1&ion=1&cad=cbv&bvch=u&sei=3eCRV-OiOcGk0gTL_4-wDw&rct=j&tbs=lf:1,lf_ui:2&npsic=0&rflfq=1&rlha=0&rllag=21232657,81459278,11834&tbm=lcl&rldimm=3177531911460586750" style="border:1em;" target="_blank">Google Map</a></p>
-	</div>
-	</div>
-	</div><br><br>
-	<div class="form-contact-body text-center" id="requestInfo">
-	<h4>Request Information</h4>
-	<form name="requestForm" method="post" action="" id="form-container" ng-controller="FormController" ng-submit="requestForm.$valid && saveData(user)" novalidate>
-	<input type="text" class="form-control" ng-model="user.firstName" placeholder="Please enter your name" required><br>
-	<input type="text" class="form-control" ng-model="user.companyName" placeholder="Please enter your company name"><br>
-	<input type="text" class="form-control" ng-model="user.mobileNumber" placeholder="Contact Number"><br>
-	<input type="email" class="form-control" ng-model="user.emailAddress" placeholder="Email" required><br>
-	<input type="text" class="form-control" ng-model="user.request" name="request" style="height:150px;" placeholder="Brief description of your requuirment" required><br><br>
-	<div class="g-recaptcha" data-sitekey="6Lc1OyYTAAAAACz3YOOGnSonOCazqWkiGFbNAMv8" style="transform:scale(0.84); float:left;transform-origin:0 0;-webkit-transform-origin:0 0;"></div><br><br>
-	<input class="btn btn-default" style="height:48px; width:100%;" type="submit" value="Send Request"/><br>
-	<br>
-	</form>
-	</div>
-
-	</div>
-	<div class="row text-uppercase">
-	    <div class="col-sm-offset-3 col-sm-6 text-center">
-            <h3>Our Contacts</h3>
-        </div>
-	</div>
-	<div class="row text-center">
+	<div id="map_canvas" ng-controller="MapController"></div>
+<div class="container" style="width:100%;">
+			<h3 class="text-center text-uppercase">Our Contacts</h3>
+	<div class="row ">
 		<div class="col-sm-4" style="text-align:center;">
-		<h4 class="text-uppercase">General</h4>
-		<address><strong>Submit a general inquiry</strong><br>
-		<a href="mailto:inquiry@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> inquiry@cubepeer.com</a>
-	</address>
+			<h4 class="text-uppercase">General</h4>
+			<address><strong>Submit a general inquiry</strong><br>
+				<a href="mailto:inquiry@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> inquiry@cubepeer.com</a>
+			</address>
 		</div>
 		<div class="col-sm-4" style="text-align:center;">
 			<h4 class="text-uppercase">Media</h4>
 			<address><strong>Contact our media team</strong><br>
-			<a href="mailto:media@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> media@cubepeer.com</a>
-		</address>
+				<a href="mailto:media@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> media@cubepeer.com</a>
+			</address>
 		</div>
 		<div class="col-sm-4" style="text-align:center;">
 			<h4 class="text-uppercase">Product support</h4>
 			<address><strong>Contact our technical support</strong><br>
-			<a href="mailto:support@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> support@cubepeer.com</a>
-		</address>
+				<a href="mailto:support@cubepeer.com"><span class="glyphicon glyphicon-envelope"></span> support@cubepeer.com</a>
+			</address>
 		</div>
-	</div>
 	</div>
 </div>
 </div>

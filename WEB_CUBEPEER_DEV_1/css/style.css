@@ -23,11 +23,6 @@ ul {
   background-size: 100%;
   background-repeat: no-repeat;
   width:100%;
-  background: url("../im/desktop.jpeg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 #products {
@@ -78,7 +73,7 @@ ul {
   height:500px;
   color: #fff;
   background-color: #80DEEA;
-  background: url("../im/workwithus.jpg") no-repeat center center;
+  background: url("../im/workwithus.png") no-repeat center center;
   -webkit-background-size: cover;
 }
 
@@ -127,40 +122,16 @@ a:hover {
   margin:20px 20px 20px 20px;
   background:rgba(0,0,0,0.7);;
 }
-
 .nav .navbar-nav > .active > a,
 .nav .navbar-nav > .active > a:hover,
 .nav .navbar-nav > .active > a:active, {
   color:#00B8D4;
 }
-
-.form-contact-body {
-  background:#00E5FF;
-  border:2px;
-  margin-top:20px;
-  margin-bottom:20px;
-}
-.map-contact {
-  margin-top:20px;
-  border:2px;
-  margin-bottom:20px;
-}
-
 #map-link {
   border: 1px solid #ffffff;
   margin:auto;
   text-align:center;
 }
-
-
-#input-div input {
-  border-width: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  outline: none;
-}
-
 .sepearter {
   background: #fff;
   position: relative;
@@ -190,4 +161,7 @@ a:hover {
 
 .ng-valid.ng-dirty {
   border-color: #78fa89;
+}
+.img-thumbnail {
+  padding:0px;
 }
